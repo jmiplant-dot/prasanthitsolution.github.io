@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prasanth IT Solution – Websites, Software & IT Support</title>
+<meta name="description" content="Prasanth IT Solution builds websites, apps and provides IT support for businesses in Chennai and across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f6fb; --surface:#ffffff; --ink:#10223d; --muted:#51627d; --line:#d5deec;
+  --brand:#0a4fd6; --brand-ink:#ffffff; --accent:#ff8a1f; --deep:#0b1f44; --deep-ink:#e8eefb;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0a1424;--surface:#12213a;--ink:#e8eefb;--muted:#9fb0cc;--line:#26385a;--brand:#5b92ff;--brand-ink:#08162e;--deep:#050d1b;--deep-ink:#e8eefb;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0a1424;--surface:#12213a;--ink:#e8eefb;--muted:#9fb0cc;--line:#26385a;--brand:#5b92ff;--brand-ink:#08162e;--deep:#050d1b;--deep-ink:#e8eefb;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark{width:32px;height:32px;border-radius:8px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-size:1rem}
+nav a{margin-left:22px;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--brand);color:var(--brand-ink);font-weight:600;text-decoration:none;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero{padding:76px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.terminal{background:var(--deep);color:var(--deep-ink);border-radius:14px;padding:20px 22px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;line-height:1.8;overflow-x:auto}
+.terminal .dots{display:flex;gap:6px;margin-bottom:12px}.terminal .dots i{width:10px;height:10px;border-radius:50%;background:#3a4f78}
+.terminal .ok{color:#6fe3a0}.terminal .hl{color:var(--accent)}
+section{padding:68px 0}
+section.alt-bg{background:var(--surface);border-block:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:12px}
+.sub{color:var(--muted);max-width:38em;margin:0 0 38px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.svc{border-left:4px solid var(--brand);padding:6px 0 6px 20px}
+.svc:nth-child(3n+2){border-color:var(--accent)}
+.svc h3{font-size:1.3rem;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why h3{font-size:1.15rem;margin-bottom:6px}.why p{margin:0;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.info p{margin:0 0 14px}.info strong{display:block;font-size:.9rem;color:var(--muted);font-weight:500}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.95rem}
+input,textarea{width:100%;margin-top:6px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+textarea{min-height:110px;resize:vertical}
+#msg{font-weight:600;min-height:1.4em;margin:0}
+footer{background:var(--deep);color:var(--deep-ink);padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.95rem}
+@media (max-width:780px){
+  .hero-grid,.contact-grid{grid-template-columns:1fr}
+  nav a{margin-left:14px;font-size:.95rem}
+  nav a.hide-m{display:none}
+  .hero{padding:48px 0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="mark" aria-hidden="true">P</span>Prasanth IT Solution</a>
+    <nav aria-label="Main">
+      <a class="hide-m" href="#services">Services</a>
+      <a class="hide-m" href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <h1>IT that keeps your business running.</h1>
+        <p class="lead">Prasanth IT Solution designs websites, builds software and looks after the computers, networks and data that small and growing businesses depend on.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get a free quote</a>
+          <a class="btn alt" href="#services">See our services</a>
+        </div>
+      </div>
+      <div class="terminal" aria-hidden="true">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div><span class="hl">$</span> check --network --backups --website</div>
+        <div><span class="ok">✓</span> Network secure</div>
+        <div><span class="ok">✓</span> Backup completed 02:00</div>
+        <div><span class="ok">✓</span> Website online, 1.2s load</div>
+        <div><span class="hl">$</span> status: all systems running</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="alt-bg">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">One team for everything technical, so you don't juggle several vendors.</p>
+      <div class="services">
+        <div class="svc"><h3>Website design</h3><p>Fast, mobile-friendly websites that present your business clearly and bring in enquiries.</p></div>
+        <div class="svc"><h3>Software & app development</h3><p>Custom billing, inventory, booking and management tools built around how you actually work.</p></div>
+        <div class="svc"><h3>IT support & maintenance</h3><p>Repairs, installations, antivirus and regular check-ups for your computers and printers.</p></div>
+        <div class="svc"><h3>Networking & CCTV</h3><p>Office Wi-Fi, LAN cabling, routers and camera systems set up properly the first time.</p></div>
+        <div class="svc"><h3>Cloud & data backup</h3><p>Email, file storage and automatic backups so one failure never costs you your data.</p></div>
+        <div class="svc"><h3>Digital marketing</h3><p>Google Business listing, SEO and social media setup to help local customers find you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <h2>Why businesses choose us</h2>
+      <p class="sub">Straightforward service from people you can reach by phone.</p>
+      <div class="why">
+        <div><h3>Clear pricing</h3><p>You get a written quote before any work starts. No surprise charges.</p></div>
+        <div><h3>Quick response</h3><p>Most support requests get a reply the same day.</p></div>
+        <div><h3>Built to last</h3><p>We document what we build and stay available after delivery.</p></div>
+        <div><h3>Plain language</h3><p>We explain options simply so you can decide with confidence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt-bg">
+    <div class="wrap contact-grid">
+      <div class="info">
+        <h2>Tell us what you need</h2>
+        <p class="sub">Send a message and we'll reply with a free quote.</p>
+        <p><strong>Phone</strong><a href="tel:+910000000000">+91 00000 00000</a></p>
+        <p><strong>Email</strong><a href="mailto:info@prasanthitsolution.com">info@prasanthitsolution.com</a></p>
+        <p><strong>Address</strong>Chennai, Tamil Nadu, India</p>
+        <p><strong>Hours</strong>Monday to Saturday, 9:30 am to 7 pm</p>
+      </div>
+      <form id="f" novalidate>
+        <div><label for="n">Your name</label><input id="n" autocomplete="name" required></div>
+        <div><label for="e">Email or phone</label><input id="e" autocomplete="email" required></div>
+        <div><label for="m">How can we help?</label><textarea id="m" required></textarea></div>
+        <button class="btn" type="submit">Send message</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Prasanth IT Solution. All rights reserved.</span>
+    <span>Websites, software and IT support</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('f').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var n=document.getElementById('n').value.trim(),e=document.getElementById('e').value.trim(),m=document.getElementById('m').value.trim(),out=document.getElementById('msg');
+  if(!n||!e||!m){out.textContent='Please fill in your name, contact and message.';return;}
+  var body=encodeURIComponent('Name: '+n+'\nContact: '+e+'\n\n'+m);
+  window.location.href='mailto:info@prasanthitsolution.com?subject='+encodeURIComponent('Enquiry from '+n)+'&body='+body;
+  out.textContent='Thank you, '+n+'. Your email app will open so you can send this message.';
+});
+</script>
+</body>
+</html>
